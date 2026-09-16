@@ -1,0 +1,211 @@
+/* ============================================================
+   LottoIQ — About
+   Built on tokens.css + site-nav.css.
+   ============================================================ */
+
+/* ---------- Hero ---------- */
+.about-hero {
+  text-align: center;
+  padding: 72px 24px 48px;
+  background: radial-gradient(circle at 50% 0%, var(--navy-3), var(--navy) 70%);
+  border-bottom: 1px solid var(--navy-3);
+}
+.about-hero h1 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2rem, 5vw, 2.6rem);
+  margin: 0 0 10px;
+}
+.about-hero .tagline {
+  color: var(--gold);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin: 0 0 18px;
+}
+.about-hero p {
+  color: var(--text-muted);
+  max-width: 560px;
+  margin: 0 auto 28px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+.btn {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.92rem;
+  padding: 13px 26px;
+  border-radius: var(--radius);
+  display: inline-block;
+}
+.btn-solid { background: var(--gold); color: var(--navy); border: 1px solid var(--gold); }
+.btn-solid:hover { background: var(--gold-dim); }
+
+/* ---------- Story split ---------- */
+.story-section { padding: 64px 24px; }
+.story-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 48px;
+  align-items: center;
+}
+.story-inner h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 4vw, 2.1rem);
+  margin: 0;
+}
+.story-inner p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin: 0 0 16px;
+}
+.story-shot {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--navy-4);
+  margin-top: 32px;
+}
+.story-shot-wrap { grid-column: 1 / -1; text-align: center; }
+.story-shot-wrap img { max-width: 780px; }
+
+/* ---------- Mission ---------- */
+.mission-section {
+  text-align: center;
+  padding: 24px 24px 64px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.mission-section .rule {
+  width: 40px;
+  height: 2px;
+  background: var(--gold);
+  margin: 0 auto 20px;
+}
+.mission-section h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 4vw, 2.1rem);
+  margin: 0 0 8px;
+}
+.mission-section .sub {
+  color: var(--gold-dim);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  margin: 0 0 20px;
+}
+.mission-section p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ---------- Values ---------- */
+.values-section {
+  background: var(--navy-2);
+  padding: 56px 24px;
+  text-align: center;
+}
+.values-section h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 4vw, 1.9rem);
+  margin: 0 0 32px;
+}
+.value-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  text-align: left;
+}
+.value-card {
+  background: var(--navy);
+  border: 1px solid var(--navy-4);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+.value-card .icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: var(--navy-3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+.value-card h3 {
+  font-family: var(--font-display);
+  color: var(--gold);
+  font-size: 1.05rem;
+  margin: 0 0 8px;
+}
+.value-card p {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* ---------- The Data ---------- */
+.data-section {
+  text-align: center;
+  padding: 64px 24px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.data-section h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 4vw, 2.1rem);
+  margin: 0 0 18px;
+}
+.data-section p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin: 0 0 32px;
+}
+.data-visual {
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--navy-4);
+  aspect-ratio: 16/8;
+  background: linear-gradient(135deg, var(--navy-3), var(--navy-2) 50%, var(--navy));
+}
+
+/* ---------- Responsible Play ---------- */
+.responsible-box {
+  max-width: var(--max-width);
+  margin: 0 auto 64px;
+  padding: 0 24px;
+}
+.responsible-box .inner {
+  background: var(--navy-2);
+  border: 1px solid var(--navy-4);
+  border-radius: var(--radius-lg);
+  padding: 32px 36px;
+}
+.responsible-box h2 {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  margin: 0 0 12px;
+}
+.responsible-box p {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.65;
+  margin: 0;
+  max-width: 640px;
+}
+
+@media (max-width: 860px) {
+  .story-inner { grid-template-columns: 1fr; }
+  .value-cards { grid-template-columns: 1fr; }
+}

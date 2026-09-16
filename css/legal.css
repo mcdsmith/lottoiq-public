@@ -1,0 +1,99 @@
+/* ============================================================
+   LottoIQ — Legal Pages (Privacy Policy, Terms of Use)
+   Built on tokens.css + site-nav.css. Shared by /privacy-policy/
+   and /terms-of-use/. Nav and footer now live in site-nav.css —
+   this file is just the legal document body styling.
+   ============================================================ */
+
+.legal-wrap a {
+  color: var(--gold);
+  text-decoration: none;
+  border-bottom: 1px solid var(--gold-bd);
+}
+.legal-wrap a:hover, .legal-wrap a:focus-visible {
+  border-bottom-color: var(--gold);
+}
+.legal-wrap a:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* ---------- Legal document body ---------- */
+.legal-wrap {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 64px 24px 96px;
+}
+.legal-wrap h1 {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 0 0 8px;
+}
+.legal-updated {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  margin: 0 0 40px;
+}
+.legal-intro {
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin: 0 0 48px;
+  font-size: 1.02rem;
+}
+.legal-section {
+  padding: 28px 0;
+  border-top: 1px solid var(--navy-3);
+}
+.legal-section:first-of-type { border-top: 1px solid var(--navy-4); }
+.legal-section h2 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0 0 14px;
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+}
+.legal-section h2 .num {
+  font-family: var(--font-mono);
+  color: var(--gold);
+  font-size: 0.95rem;
+}
+.legal-section p, .legal-section li {
+  color: var(--text-muted);
+  line-height: 1.75;
+  font-size: 0.98rem;
+}
+.legal-section p { margin: 0 0 14px; }
+.legal-section ul, .legal-section ol {
+  margin: 0 0 14px;
+  padding-left: 22px;
+}
+.legal-section li { margin-bottom: 8px; }
+.legal-section h3 {
+  font-family: var(--font-display);
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: var(--text);
+  margin: 20px 0 10px;
+}
+.legal-section strong { color: var(--text); font-weight: 600; }
+
+.legal-contact {
+  margin-top: 40px;
+  padding: 24px;
+  background: var(--navy-2);
+  border: 1px solid var(--gold-bd);
+  border-radius: var(--radius);
+}
+.legal-contact p { margin: 0 0 6px; color: var(--text-muted); }
+.legal-contact p:last-child { margin-bottom: 0; }
+
+@media (max-width: 640px) {
+  .legal-wrap { padding: 40px 20px 72px; }
+}
