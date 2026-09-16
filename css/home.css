@@ -11,9 +11,9 @@
   padding: 72px 24px 40px;
 }
 .hero .eyebrow {
-  display: block;
-  width: 100%;
-  text-align: center;
+  display: block !important;
+  width: 100% !important;
+  text-align: center !important;
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 0.78rem;
