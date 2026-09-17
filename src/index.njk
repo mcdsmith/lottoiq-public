@@ -17,7 +17,7 @@ title: Blog
       <div class="post-card-body">
         {% if post.data.category %}<p class="post-category">{{ post.data.category }}</p>{% endif %}
         <h2>{{ post.data.title }}</h2>
-        <p class="post-meta"><time datetime="{{ post.date | isoDate }}">{{ post.date | readableDate }}</time></p>
+        <p class="post-meta"> <time datetime="{{ post.data.date | isoDate }}">{{ post.data.date | readableDate }}</time></p>
         {% if post.data.excerpt %}<p class="post-excerpt">{{ post.data.excerpt }}</p>{% endif %}
       </div>
     </a>
