@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }}{% if title %} · {% endif %}LottoIQ Blog</title>
+  <meta name="description" content="{{ description or 'Lottery number stats, trends and analysis for Lotto 6/49, Lotto MAX, Lottario and Ontario 49 — from LottoIQ.ca.' }}">
+  <link rel="stylesheet" href="/css/blog.css">
+  <link rel="alternate" type="application/rss+xml" title="LottoIQ Blog" href="/feed.xml">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="https://lottoiq.ca">Lotto<span>IQ</span>.ca</a>
+      <nav class="site-nav">
+        <a href="https://lottoiq.ca">Dashboard</a>
+        <a href="/">Blog</a>
+        <a href="https://lottoiq.ca/pricing">Insider</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    {{ content | safe }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p class="disclaimer">
+        LottoIQ.ca provides statistical analysis of past lottery draws for entertainment and informational
+        purposes only. Past results do not predict future draws, and no method can improve your odds of
+        winning. Please play responsibly. If gambling is no longer fun, call <a href="https://connexontario.ca/">ConnexOntario</a> at 1-866-531-2600.
+      </p>
+      <p class="contact"><a href="mailto:info@lottoiq.ca">info@lottoiq.ca</a></p>
+      <p class="copyright">&copy; {{ currentYear }} LottoIQ.ca. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

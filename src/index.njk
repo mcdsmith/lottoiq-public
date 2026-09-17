@@ -1,0 +1,26 @@
+---
+layout: base.njk
+title: Blog
+---
+<section class="post-list-header">
+  <h1>LottoIQ Blog</h1>
+  <p>Straight talk on lottery stats, trends, and how (and how not) to use them — for Lotto 6/49, Lotto MAX, Lottario and Ontario 49.</p>
+</section>
+
+<ul class="post-list">
+  {% for post in collections.posts %}
+  <li class="post-card">
+    <a href="{{ post.url }}">
+      {% if post.data.image %}
+      <img class="post-card-thumb" src="{{ post.data.image }}" alt="{{ post.data.imageAlt or post.data.title }}">
+      {% endif %}
+      <div class="post-card-body">
+        {% if post.data.category %}<p class="post-category">{{ post.data.category }}</p>{% endif %}
+        <h2>{{ post.data.title }}</h2>
+        <p class="post-meta"><time datetime="{{ post.date | isoDate }}">{{ post.date | readableDate }}</time></p>
+        {% if post.data.excerpt %}<p class="post-excerpt">{{ post.data.excerpt }}</p>{% endif %}
+      </div>
+    </a>
+  </li>
+  {% endfor %}
+</ul>
