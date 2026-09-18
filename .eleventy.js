@@ -21,8 +21,8 @@ module.exports = function (eleventyConfig) {
     const now = new Date();
     return collectionApi
       .getFilteredByGlob("src/posts/*.md")
-      .filter((post) => post.date <= now)
-      .sort((a, b) => b.date - a.date);
+      .filter((post) => post.data.date <= now)
+      .sort((a, b) => b.data.date - a.data.date);
   });
 
   return {
