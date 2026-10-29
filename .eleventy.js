@@ -1,9 +1,21 @@
 const { DateTime } = require("luxon");
 
 module.exports = function (eleventyConfig) {
-  // Copy CSS and images straight through to the output folder
-  eleventyConfig.addPassthroughCopy("src/css");
-  eleventyConfig.addPassthroughCopy("src/images");
+  // The hand-built marketing pages live at the repo root and are copied
+  // through to the build untouched, so ONE build produces the whole site:
+  //   /  /about/  /how-it-works/  /responsible-gambling/  /privacy-policy/
+  //   /terms-of-use/  (static)   and   /blog/...  (generated from src/).
+  eleventyConfig.addPassthroughCopy({
+    "index.html": "index.html",
+    "about": "about",
+    "how-it-works": "how-it-works",
+    "responsible-gambling": "responsible-gambling",
+    "privacy-policy": "privacy-policy",
+    "terms-of-use": "terms-of-use",
+    "css": "css",
+    "images": "images",
+    "src/images/posts": "images/posts",
+  });
 
   // Human-readable date filter, e.g. "September 3, 2026"
   eleventyConfig.addFilter("readableDate", (dateObj) => {

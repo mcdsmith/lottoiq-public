@@ -10,8 +10,8 @@
 // isoDate/readableDate filters, and the collection filter in .eleventy.js),
 // so no other template needed to change.
 //
-// permalink stays the same idea as before: if the computed publish moment
-// hasn't arrived yet, Eleventy writes no page at all for this post.
+// permalink: if the computed publish moment hasn't arrived yet, Eleventy writes
+// no page at all for this post; otherwise it lands at /blog/<slug>/.
 const { DateTime } = require("luxon");
 
 module.exports = {
@@ -28,7 +28,8 @@ module.exports = {
       if (data.date && new Date(data.date) > new Date()) {
         return false;
       }
-      return data.permalink;
+      // Posts live at /blog/<filename-slug>/
+      return `/blog/${data.page.fileSlug}/`;
     },
   },
 };
