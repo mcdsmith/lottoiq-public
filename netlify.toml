@@ -6,12 +6,139 @@
   directory = "netlify/functions"
 
 # --- Legacy Wix URLs -> new site -------------------------------------------
-# Wix served posts at /post/<slug>. Slugs that match a new post redirect 1:1
-# (add specific lines ABOVE the catch-all as the URL audit turns them up);
-# anything else lands on the blog index instead of a 404.
+# Wix served posts at /post/<slug>. Netlify can't test whether a target page
+# exists, so each current post gets its own explicit rule (generated from
+# src/posts/*.md -- add a line here when a post is added whose Wix URL was
+# ever public). Anything else under /post/ falls back to the blog index.
+
 [[redirects]]
-  from = "/post/:slug"
-  to = "/blog/:slug/"
+  from = "/post/backtesting-due-score"
+  to = "/blog/backtesting-due-score/"
+  status = 301
+
+[[redirects]]
+  from = "/post/can-you-combine-lottery-game-stats"
+  to = "/blog/can-you-combine-lottery-game-stats/"
+  status = 301
+
+[[redirects]]
+  from = "/post/cluster-affinity-explained"
+  to = "/blog/cluster-affinity-explained/"
+  status = 301
+
+[[redirects]]
+  from = "/post/hot-cold-numbers-two-ways-to-look-at-recent-draw-history"
+  to = "/blog/hot-cold-numbers-two-ways-to-look-at-recent-draw-history/"
+  status = 301
+
+[[redirects]]
+  from = "/post/how-due-score-actually-works"
+  to = "/blog/how-due-score-actually-works/"
+  status = 301
+
+[[redirects]]
+  from = "/post/lottario-vs-649-vs-ontario-49-vs-max"
+  to = "/blog/lottario-vs-649-vs-ontario-49-vs-max/"
+  status = 301
+
+[[redirects]]
+  from = "/post/maxmillions-jackpot-spike"
+  to = "/blog/maxmillions-jackpot-spike/"
+  status = 301
+
+[[redirects]]
+  from = "/post/my-numbers-saved-favourites-your-lucky-numbers-always-in-the-mix"
+  to = "/blog/my-numbers-saved-favourites-your-lucky-numbers-always-in-the-mix/"
+  status = 301
+
+[[redirects]]
+  from = "/post/overdue-numbers-tracking-what-hasn-t-shown-up-in-a-while"
+  to = "/blog/overdue-numbers-tracking-what-hasn-t-shown-up-in-a-while/"
+  status = 301
+
+[[redirects]]
+  from = "/post/pattern-statistics-what-does-a-typical-winning-draw-actually-look-like"
+  to = "/blog/pattern-statistics-what-does-a-typical-winning-draw-actually-look-like/"
+  status = 301
+
+[[redirects]]
+  from = "/post/quick-pick-vs-self-select"
+  to = "/blog/quick-pick-vs-self-select/"
+  status = 301
+
+[[redirects]]
+  from = "/post/randomness-in-action-simulator"
+  to = "/blog/randomness-in-action-simulator/"
+  status = 301
+
+[[redirects]]
+  from = "/post/standard-vs-insider-feature-comparison"
+  to = "/blog/standard-vs-insider-feature-comparison/"
+  status = 301
+
+[[redirects]]
+  from = "/post/the-dataset-selector-did-my-numbers-ever-win-two-features-worth-knowing-about"
+  to = "/blog/the-dataset-selector-did-my-numbers-ever-win-two-features-worth-knowing-about/"
+  status = 301
+
+[[redirects]]
+  from = "/post/the-lottoiq-number-generator-a-smarter-way-to-pick-your-numbers"
+  to = "/blog/the-lottoiq-number-generator-a-smarter-way-to-pick-your-numbers/"
+  status = 301
+
+[[redirects]]
+  from = "/post/the-lottoiq-strategy-for-lottario"
+  to = "/blog/the-lottoiq-strategy-for-lottario/"
+  status = 301
+
+[[redirects]]
+  from = "/post/the-lottoiq-strategy-for-lotto-6-49"
+  to = "/blog/the-lottoiq-strategy-for-lotto-6-49/"
+  status = 301
+
+[[redirects]]
+  from = "/post/the-lottoiq-strategy-for-lotto-max"
+  to = "/blog/the-lottoiq-strategy-for-lotto-max/"
+  status = 301
+
+[[redirects]]
+  from = "/post/the-lottoiq-strategy-for-ontario-49"
+  to = "/blog/the-lottoiq-strategy-for-ontario-49/"
+  status = 301
+
+[[redirects]]
+  from = "/post/top-number-pairs-some-numbers-just-seem-to-like-each-other"
+  to = "/blog/top-number-pairs-some-numbers-just-seem-to-like-each-other/"
+  status = 301
+
+[[redirects]]
+  from = "/post/trend-tags-rising-stable-and-cooling"
+  to = "/blog/trend-tags-rising-stable-and-cooling/"
+  status = 301
+
+[[redirects]]
+  from = "/post/what-the-frequency-heatmap-tells-you-and-what-it-doesn-t"
+  to = "/blog/what-the-frequency-heatmap-tells-you-and-what-it-doesn-t/"
+  status = 301
+
+[[redirects]]
+  from = "/post/where-lottoiq-draw-data-comes-from"
+  to = "/blog/where-lottoiq-draw-data-comes-from/"
+  status = 301
+
+[[redirects]]
+  from = "/post/will-ai-actually-make-my-lottery-numbers-choice-better"
+  to = "/blog/will-ai-actually-make-my-lottery-numbers-choice-better/"
+  status = 301
+
+[[redirects]]
+  from = "/post/*"
+  to = "/blog/"
+  status = 301
+
+[[redirects]]
+  from = "/blog/categories/*"
+  to = "/blog/"
   status = 301
 
 [[redirects]]
