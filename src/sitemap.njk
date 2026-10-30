@@ -1,0 +1,14 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%- set pages = ["/", "/how-it-works/", "/about/", "/responsible-gambling/", "/privacy-policy/", "/terms-of-use/", "/blog/"] %}
+{%- for p in pages %}
+  <url><loc>https://lottoiq.ca{{ p }}</loc></url>
+{%- endfor %}
+{%- for post in collections.posts %}
+  <url><loc>https://lottoiq.ca{{ post.url }}</loc><lastmod>{{ post.data.date | isoDate }}</lastmod></url>
+{%- endfor %}
+</urlset>
